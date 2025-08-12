@@ -1,0 +1,13 @@
+# Environment
+.env
+
+# Python cache
+__pycache__/
+*.py[cod]
+
+# Django local files
+db.sqlite3
+staticfiles/
+
+# Visual Studio Code settings
+.vscode/

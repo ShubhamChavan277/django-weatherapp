@@ -1,0 +1,149 @@
+{% extends 'base.html' %} 
+
+{% block title %} Home {% endblock title%} 
+
+{%block body %}
+
+<div
+  class="d-flex flex-column align-items-center pb-5"
+  style="background-color: rgb(245, 245, 245); height: 100%"
+>
+  <!-- Input City Name and Country Code-->
+  <form class="d-flex my-3" role="search" method="GET" action="/">
+    <input
+      class="form-control me-2"
+      type="search"
+      placeholder="City Name"
+      aria-label="Search"
+      name="city"
+      size="20px"
+      required
+    />
+    <input
+      class="form-control me-2"
+      type="search"
+      placeholder="Country Code (optional)"
+      aria-label="Search"
+      name="country"
+      size="20px"
+      minlength="2"
+      maxlength="2" 
+      pattern="[A-Za-z]{2}" 
+    />
+  
+    <button class="btn btn-success" type="submit">Search</button>
+  </form>
+
+  <!-- Weather Card -->
+  <div
+    class="container p-0"
+    style="max-width: 50rem; height: 100%; border-radius: 40px; overflow: hidden"
+  >
+    <div
+      class="card card-center p-0 border-0" style="background-image: url(/static/images/weather_card_bg.jpeg); background-size: cover;
+        background-position: center;"
+    >
+
+      <!-- Adds black overlay over weather card to make content visible over the image-->
+      <div class="black-overlay"></div>
+
+      <div
+        class=" row g-0 m-3 mb-0 "
+        style="position: relative; z-index: 1"
+      >
+        <div class="col-md-2 d-flex justify-content-center align-items-center">
+          <div
+            class="container-center rounded-3"
+            style="background-color: rgba(206, 206, 206, 0)"
+          >
+            <img
+              src="https://openweathermap.org/img/wn/{{ data.icon }}@2x.png"
+            />
+          </div>
+        </div>
+        <div class="col-md-10" style="color: white">
+          <div class="card-body">
+            <h1 class="card-title m-0">
+              {{ data.city_name }}, {{ data.country_code }}
+              <span class="fi fi-{{ data.country_code_lower }}"></span>
+            </h1>
+            <p class="card-text fs-1 m-0">{{ data.temperature }}°C</p>
+            <p class="card-text fs-6 m-0">
+              {{ data.main }}, {{ data.description }}
+            </p>
+            <p class="card-text fs-6 m-0">{{ readable_time }}</p>
+          </div>
+        </div>
+
+        
+      </div>
+      <!-- Weather parameter tiles -->
+        <div
+          class="row row-cols-1 row-cols-md-2 row-cols-lg-3 row-cols-xl-3 p-0 g-3 mx-4 mt-0 mb-4" style="position: relative; z-index: 1"
+        >
+          <div class="col">
+            <div class="card h-100 glass-effect text-white">
+              <div class="card-body">
+                <i class="bi bi-thermometer-half"></i>
+                <p class="card-text fw-light mt-3 mb-2">Feels like</p>
+                <h5 class="card-title fs-4">{{ data.feels_like }}°C</h5>
+              </div>
+            </div>
+          </div>
+
+          <div class="col">
+            <div class="card h-100 glass-effect text-white">
+              <div class="card-body">
+                <i class="bi bi-thermometer"></i> / <i class="bi bi-thermometer-high"></i>
+                <p class="card-text fw-light mt-3 mb-2">Min / Max temperature</p>
+                <h5 class="card-title fs-4">
+                  {{ data.temp_min }}°C / {{ data.temp_max }}°C
+                </h5>
+              </div>
+            </div>
+          </div>
+
+          <div class="col">
+            <div class="card h-100 glass-effect text-white">
+              <div class="card-body">
+                <i class="bi bi-wind"></i>
+                <p class="card-text fw-light mt-3 mb-2">Air pressure</p>
+                <h5 class="card-title fs-4">{{ data.pressure }} hPa</h5>
+              </div>
+            </div>
+          </div>
+
+          <div class="col">
+            <div class="card h-100 glass-effect text-white">
+              <div class="card-body">
+                <i class="bi bi-moisture"></i>
+                <p class="card-text fw-light mt-3 mb-2">Humidity</p>
+                <h5 class="card-title fs-4">{{ data.humidity }}%</h5>
+              </div>
+            </div>
+          </div>
+
+          <div class="col">
+            <div class="card h-100 glass-effect text-white">
+              <div class="card-body">
+                <i class="bi bi-eye"></i>
+                <p class="card-text fw-light mt-3 mb-2">Visibility</p>
+                <h5 class="card-title fs-4">{{ data.visibility }} km</h5>
+              </div>
+            </div>
+          </div>
+
+          <div class="col">
+            <div class="card h-100 glass-effect text-white">
+              <div class="card-body">
+                <i class="bi bi-speedometer2"></i>
+                <p class="card-text fw-light mt-3 mb-2">Wind speed</p>
+                <h5 class="card-title fs-4">{{ data.wind_speed }} km/h</h5>
+              </div>
+            </div>
+          </div>
+        </div>
+    </div>
+  </div>
+</div>
+{% endblock body%}

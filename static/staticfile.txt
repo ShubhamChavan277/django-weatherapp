@@ -1,0 +1,21 @@
+Welcome, you are in a static text file! 
+
+A static file is a file that does not change when someone visits your site.
+It is stored in your Django project’s 'static' folder and sent to the browser exactly as it is.
+
+Static files can include: 
+Images/videos used in your project
+CSS/JS files used for your project
+Any text file, PDF or other resource you want to share as-is
+
+
+How to access static files:
+1. In 'settings.py' make sure you have included:
+STATICFILES_DIRS = [ 
+    BASE_DIR / "static", 
+]
+
+2. Run your development server (python manage.py runserver).
+
+3. Write the following url in your browser: 
+https://127.0.0.1:8000/static/staticfile.txt

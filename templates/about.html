@@ -1,0 +1,256 @@
+{% extends 'base.html' %} 
+
+{% block title %} About {% endblock title %} 
+
+{% block body %}
+
+<div class="d-flex container-fluid p-0">
+  <img
+    src="/static/images/about.jpg"
+    alt="Contact Us"
+    class="img-fluid w-100"
+  />
+</div>
+
+<div
+  class="container-fluid"
+  style="background-color: rgb(245, 245, 245); height: 100%"
+>
+  <section class="py-3 py-md-5">
+    <div class="container">
+      <div
+        class="row gy-3 gy-md-4 gy-lg-0 justify-content-lg-center align-items-lg-center"
+      >
+        <div class="col-12 col-lg-10">
+
+          <div class="row justify-content-xl-center">
+            <div class="col-12 col-xl-11">
+              
+              <!-- About WeatherApp -->
+              <div class="d-flex">
+                <div class="me-4 text-primary mt-1">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="28"
+                    height="28"
+                    fill="currentColor"
+                    class="bi bi-cloud-moon-fill"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      d="M11.473 11a4.5 4.5 0 0 0-8.72-.99A3 3 0 0 0 3 16h8.5a2.5 2.5 0 0 0 0-5z"
+                    />
+                    <path
+                      d="M11.286 1.778a.5.5 0 0 0-.565-.755 4.595 4.595 0 0 0-3.18 5.003 5.5 5.5 0 0 1 1.055.209A3.6 3.6 0 0 1 9.83 2.617a4.593 4.593 0 0 0 4.31 5.744 3.58 3.58 0 0 1-2.241.634q.244.477.394 1a4.59 4.59 0 0 0 3.624-2.04.5.5 0 0 0-.565-.755 3.593 3.593 0 0 1-4.065-5.422z"
+                    />
+                  </svg>
+                </div>
+                <div>
+                  <h3 class="mb-3">WeatherApp</h3>
+                  <p class="lead fs-5 text-secondary mb-5">
+                    WeatherApp is a sleek, reliable, and user-friendly weather
+                    forecasting web application designed to provide real-time,
+                    location-based weather information with clarity and
+                    accuracy. Built using the powerful Django web framework,
+                    Bootstrap for a responsive front-end, and the OpenWeather
+                    API for trusted meteorological data, WeatherApp helps users
+                    stay informed and prepared—wherever they are.
+                  </p>
+                </div>
+              </div>
+
+              <!-- Our Missions -->
+              <div class="d-flex">
+                <div class="me-4 text-primary mt-1">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="28"
+                    height="28"
+                    fill="currentColor"
+                    class="bi bi-bullseye"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16"
+                    />
+                    <path
+                      d="M8 13A5 5 0 1 1 8 3a5 5 0 0 1 0 10m0 1A6 6 0 1 0 8 2a6 6 0 0 0 0 12"
+                    />
+                    <path
+                      d="M8 11a3 3 0 1 1 0-6 3 3 0 0 1 0 6m0 1a4 4 0 1 0 0-8 4 4 0 0 0 0 8"
+                    />
+                    <path d="M9.5 8a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0" />
+                  </svg>
+                </div>
+                <div>
+                  <h3 class="mb-3">Our Mission</h3>
+                  <p class="lead fs-5 text-secondary mb-5">
+                    At WeatherApp, our mission is simple:<br />To deliver
+                    accurate, real-time weather updates through a clean and
+                    intuitive interface—making weather forecasting accessible
+                    and useful for everyone.<br />Whether you're planning your
+                    day, preparing for travel, or just checking the skies, our
+                    app provides instant, easy-to-understand data that empowers
+                    decision-making.
+                  </p>
+                </div>
+              </div>
+
+              <!-- Tech Stack -->
+              <div class="d-flex">
+                <div class="me-4 text-primary mt-2">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="28"
+                    height="28"
+                    fill="currentColor"
+                    class="bi bi-stack"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      d="m14.12 10.163 1.715.858c.22.11.22.424 0 .534L8.267 15.34a.6.6 0 0 1-.534 0L.165 11.555a.299.299 0 0 1 0-.534l1.716-.858 5.317 2.659c.505.252 1.1.252 1.604 0l5.317-2.66zM7.733.063a.6.6 0 0 1 .534 0l7.568 3.784a.3.3 0 0 1 0 .535L8.267 8.165a.6.6 0 0 1-.534 0L.165 4.382a.299.299 0 0 1 0-.535z"
+                    />
+                    <path
+                      d="m14.12 6.576 1.715.858c.22.11.22.424 0 .534l-7.568 3.784a.6.6 0 0 1-.534 0L.165 7.968a.299.299 0 0 1 0-.534l1.716-.858 5.317 2.659c.505.252 1.1.252 1.604 0z"
+                    />
+                  </svg>
+                </div>
+                <div>
+                  <h3 class="mb-3">Technology Stack</h3>
+                  <ul class="lead fs-5 text-secondary mb-5 list-unstyled">
+                    <li class="bi bi-dot">Backend: Django (Python)</li>
+                    <li class="bi bi-dot">Frontend: Bootstrap (HTML/CSS)</li>
+                    <li class="bi bi-dot">API Integration: OpenWeatherMap API</li>
+                    <li class="bi bi-dot">Database: SQLite3 (Django's default local database)</li>
+                  </ul>
+                </div>
+              </div>
+
+              <!-- Key Features -->
+              <div class="d-flex">
+                <div class="me-4 text-primary mt-1">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="26"
+                    height="26"
+                    fill="currentColor"
+                    class="bi bi-star-fill"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"
+                    />
+                  </svg>
+                </div>
+                <div>
+                  <div class="row gy-4 gy-md-4 gx-xxl-5X">
+                    <h3 class="mb-2">Key Features</h3>
+                    <div class="col-12 col-md-6">
+                      <div class="d-flex">
+                        <div class="me-4 text-warning mt-1">
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="28"
+                            height="28"
+                            fill="currentColor"
+                            class="bi bi-cloud-drizzle-fill"
+                            viewBox="0 0 16 16"
+                          >
+                            <path
+                              d="M4.158 12.025a.5.5 0 0 1 .316.633l-.5 1.5a.5.5 0 0 1-.948-.316l.5-1.5a.5.5 0 0 1 .632-.317m6 0a.5.5 0 0 1 .316.633l-.5 1.5a.5.5 0 0 1-.948-.316l.5-1.5a.5.5 0 0 1 .632-.317m-3.5 1.5a.5.5 0 0 1 .316.633l-.5 1.5a.5.5 0 0 1-.948-.316l.5-1.5a.5.5 0 0 1 .632-.317m6 0a.5.5 0 0 1 .316.633l-.5 1.5a.5.5 0 1 1-.948-.316l.5-1.5a.5.5 0 0 1 .632-.317m.747-8.498a5.001 5.001 0 0 0-9.499-1.004A3.5 3.5 0 1 0 3.5 11H13a3 3 0 0 0 .405-5.973"
+                            />
+                          </svg>
+                        </div>
+                        <div>
+                          <h3 class="h4 mb-3">Real-Time Weather</h3>
+                          <p class="text-secondary mb-0">
+                            Current temperature, humidity, wind speed, and more.
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-12 col-md-6">
+                      <div class="d-flex">
+                        <div class="me-4 text-warning mt-1">
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="26"
+                            height="26"
+                            fill="currentColor"
+                            class="bi bi-fire"
+                            viewBox="0 0 16 16"
+                          >
+                            <path
+                              d="M8 16c3.314 0 6-2 6-5.5 0-1.5-.5-4-2.5-6 .25 1.5-1.25 2-1.25 2C11 4 9 .5 6 0c.357 2 .5 4-2 6-1.25 1-2 2.729-2 4.5C2 14 4.686 16 8 16Zm0-1c-1.657 0-3-1-3-2.75 0-.75.25-2 1.25-3C6.125 10 7 10.5 7 10.5c-.375-1.25.5-3.25 2-3.5-.179 1-.25 2 1 3 .625.5 1 1.364 1 2.25C11 14 9.657 15 8 15Z"
+                            />
+                          </svg>
+                        </div>
+                        <div>
+                          <h3 class="h4 mb-3">Powered by OpenWeather API</h3>
+                          <p class="text-secondary mb-0">
+                            Backed by a reliable global weather data provider.
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-12 col-md-6">
+                      <div class="d-flex">
+                        <div class="me-4 text-warning mt-1">
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="26"
+                            height="26"
+                            fill="currentColor"
+                            class="bi bi-book-half"
+                            viewBox="0 0 16 16"
+                          >
+                            <path
+                              d="M8.5 2.687c.654-.689 1.782-.886 3.112-.752 1.234.124 2.503.523 3.388.893v9.923c-.918-.35-2.107-.692-3.287-.81-1.094-.111-2.278-.039-3.213.492zM8 1.783C7.015.936 5.587.81 4.287.94c-1.514.153-3.042.672-3.994 1.105A.5.5 0 0 0 0 2.5v11a.5.5 0 0 0 .707.455c.882-.4 2.303-.881 3.68-1.02 1.409-.142 2.59.087 3.223.877a.5.5 0 0 0 .78 0c.633-.79 1.814-1.019 3.222-.877 1.378.139 2.8.62 3.681 1.02A.5.5 0 0 0 16 13.5v-11a.5.5 0 0 0-.293-.455c-.952-.433-2.48-.952-3.994-1.105C10.413.809 8.985.936 8 1.783"
+                            />
+                          </svg>
+                        </div>
+                        <div>
+                          <h3 class="h4 mb-3">Readable Format</h3>
+                          <p class="text-secondary mb-0">
+                            Weather details presented in a clean and friendly
+                            format with human-readable date and time.
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-12 col-md-6">
+                      <div class="d-flex">
+                        <div class="me-4 text-warning mt-1">
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="26"
+                            height="26"
+                            fill="currentColor"
+                            class="bi bi-geo-alt-fill"
+                            viewBox="0 0 16 16"
+                          >
+                            <path
+                              d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10m0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6"
+                            />
+                          </svg>
+                        </div>
+                        <div>
+                          <h3 class="h4 mb-3">Location-Based Forecasts</h3>
+                          <p class="text-secondary mb-0">
+                            Get weather updates for any location worldwide.
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+
+{% endblock body %}
